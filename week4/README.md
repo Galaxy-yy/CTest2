@@ -35,7 +35,7 @@ Romance is the which turns the dust.
 
 样例输入
 ```
-3
+1
 5
 -1
 10
@@ -103,16 +103,16 @@ Error！
 样例输出
 ```
          1
-         
+
          1
-         
+
          1
         34
-        
+
          1
         34
       1597
-      
+
 Error！
 
          1

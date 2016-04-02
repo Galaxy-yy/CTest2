@@ -9,12 +9,13 @@ int main() {
             for(i=0;i<n;i++){
                 c = b; b += a; a = c;
                 printf("%10d", a);
-                if((i+1)%8 == 8)printf("\n\n");
+                if((i+1)%8 == 0)printf("\n");
             }
-            printf("\n\n");
+            if(i%8 != 0)printf("\n\n");
+            else printf("\n");
         }
         else if(n == 0)break;
-        else printf("Error!\n");
+        else printf("Error!\n\n");
     }
     return 0;
 }

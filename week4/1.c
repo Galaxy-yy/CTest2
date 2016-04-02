@@ -1,22 +1,20 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    int N,i;
+    int N,i,j,k;
 //  printf("Input N:");
     scanf("%d", &N);
-    int a,b='\n';
     getchar();
+    char s[100];
     for(i=0;i<N;i++){
-//      printf("Input sentences:");
-        while((a=getchar()) != '\n'){
-            if(a == ' ')
-                if(b != ' ')
-                    putchar(a);
-            if(a != ' ')
-                putchar(a);
-            b = a;
+        fgets(s,100,stdin);
+        j=strlen(s);
+        for(k=0;k<j;k++){
+            if(s[k]==' ' && s[k+1]==' ')
+            continue;
+            else putchar(s[k]);
         }
-        printf("\n");
     }
     return 0;
 }

@@ -1,22 +1,28 @@
 #include<stdio.h>
-#include<string.h>
+
+int getEnd(unsigned long int a, int m);
 
 int main(void){
-	char n[10];
+	unsigned long int n;
 	int k;
-	while(scanf("%s %d", &n, &k) != EOF){
+	while(scanf("%lu %d", &n, &k) != EOF){
 		printf("%d\n", getEnd(n,k));
 	}
 	return 0;
 }
 
-int getEnd(char s[], int m){
+int getEnd(unsigned long int a, int m){
+	int length = 0;
+	int s[10];
 	int i = 0;
-	while(s[i] != '\0')
+	while(a != 0){
+		s[i] = a % 10;
+		a /= 10;
+		length++;
 		i++;
-	//printf("%d", i);
-	if(m > i)
+	}
+	if(length < m)
 		return -1;
-	else return s[i-m] - 48;
+	else return s[m-1];
 }
 

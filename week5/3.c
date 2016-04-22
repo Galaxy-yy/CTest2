@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+int getSum(int s);
+
 int main(void){
 	int a,b,n;
 	scanf("%d", &n);

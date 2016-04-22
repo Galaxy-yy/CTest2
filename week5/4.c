@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+double getSum(int a);
+
 double getSum(int a){
 	double s = 0;
 	int i;
